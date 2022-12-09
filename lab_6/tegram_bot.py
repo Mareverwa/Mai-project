@@ -1,7 +1,7 @@
 import telebot
 import requests
 
-TOKEN = '5761330839:AAEPHPeYqaluMQEhxdPvjwc_taY4rKoFyMs'
+TOKEN = '5896503241:AAHDcrepzp5qxqSh4JWce0kqJVwcHYyCed4'
 bot = telebot.TeleBot(TOKEN)
 
 @bot.message_handler(commands=['start', 'help'])
@@ -17,7 +17,7 @@ def get_user_text(message):
     print(message.text)
     results = requests.get('https://open.er-api.com/v6/latest/USD',params)
     try:
-        bot.send_message(message.chat.id,f"Current Echange Rate: 1 USD  {results.json()['rates'][str(message.text).upper()]}")
+        bot.send_message(message.chat.id,f"Current Echange Rate: 1 USD is equivelent to  {results.json()['rates'][str(message.text).upper()]}")
     except:
          bot.send_message(message.chat.id,"Please type a currency code e.g EUR")
 
