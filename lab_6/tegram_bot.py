@@ -19,7 +19,7 @@ def get_user_text(message):
     try:
         bot.send_message(message.chat.id,f"Current Echange Rate: 1 USD is equivelent to  {results.json()['rates'][str(message.text).upper()]}")
     except:
-         bot.send_message(message.chat.id,"Please type a currency code e.g EUR")
+         bot.send_message(message.chat.id,"Please type a currency(money) code e.g RUB for Russian rubbles, or CNY for the Chinese Yuan Renminbi or BYN for the Belarusin rubble to be displayed !!!,,  Examples of valid Currecy Codes can be found on this link https://stockmarketmba.com/listofcurrencies.php")
 
 
 
